@@ -280,19 +280,19 @@ const tabs = [
                 </FormField>
               </div>
               
-              {patient.address && (
-                <div className="space-y-4">
-                  <h4 className="font-medium text-gray-900">Address</h4>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <p className="text-gray-900">
-                      {patient.address.street && `${patient.address.street}, `}
-                      {patient.address.city && `${patient.address.city}, `}
-                      {patient.address.state && `${patient.address.state} `}
-                      {patient.address.zipCode}
-                    </p>
-                  </div>
-                </div>
-              )}
+{(patient.address || patient.address_street) && (
+<div className="space-y-4">
+<h4 className="font-medium text-gray-900">Address</h4>
+<div className="bg-gray-50 p-4 rounded-lg">
+<p className="text-gray-900">
+{(patient.address?.street || patient.address_street) && `${patient.address?.street || patient.address_street}, `}
+{(patient.address?.city || patient.address_city) && `${patient.address?.city || patient.address_city}, `}
+{(patient.address?.state || patient.address_state) && `${patient.address?.state || patient.address_state} `}
+{patient.address?.zipCode || patient.address_zipCode}
+</p>
+</div>
+</div>
+)}
             </div>
           )}
           

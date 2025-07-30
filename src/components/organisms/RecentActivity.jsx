@@ -15,14 +15,14 @@ const RecentActivity = () => {
     try {
       setLoading(true);
       setError("");
-      const data = await DashboardService.getRecentActivity();
-      setActivities(data);
-    } catch (err) {
-      setError("Failed to load recent activity");
-    } finally {
-      setLoading(false);
-    }
-  };
+const data = await DashboardService.getRecentActivity();
+setActivities(data);
+} catch (err) {
+setError("Failed to load recent activity");
+} finally {
+setLoading(false);
+}
+};
   
   useEffect(() => {
     loadActivities();
