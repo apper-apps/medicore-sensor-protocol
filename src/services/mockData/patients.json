@@ -1,0 +1,262 @@
+[
+  {
+    "Id": 1,
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "dateOfBirth": "1985-03-15",
+    "gender": "female",
+    "bloodType": "A+",
+    "phone": "(555) 123-4567",
+    "email": "sarah.johnson@email.com",
+    "address": {
+      "street": "123 Main Street",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62701"
+    },
+    "emergencyContacts": [
+      {
+        "name": "Michael Johnson",
+        "relationship": "Spouse",
+        "phone": "(555) 123-4568"
+      }
+    ],
+    "medicalHistory": [
+      {
+        "condition": "Hypertension",
+        "diagnosedDate": "2020-05-12",
+        "status": "Managed"
+      }
+    ],
+    "currentMedications": [
+      {
+        "name": "Lisinopril",
+        "dosage": "10mg",
+        "frequency": "Once daily",
+        "prescribedDate": "2020-05-12"
+      }
+    ],
+    "allergies": ["Penicillin"],
+    "lastVisit": "2024-01-15",
+    "status": "active"
+  },
+  {
+    "Id": 2,
+    "firstName": "Robert",
+    "lastName": "Chen",
+    "dateOfBirth": "1972-11-08",
+    "gender": "male",
+    "bloodType": "O-",
+    "phone": "(555) 987-6543",
+    "email": "robert.chen@email.com",
+    "address": {
+      "street": "456 Oak Avenue",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62702"
+    },
+    "emergencyContacts": [
+      {
+        "name": "Lisa Chen",
+        "relationship": "Wife",
+        "phone": "(555) 987-6544"
+      },
+      {
+        "name": "David Chen",
+        "relationship": "Son",
+        "phone": "(555) 987-6545"
+      }
+    ],
+    "medicalHistory": [
+      {
+        "condition": "Diabetes Type 2",
+        "diagnosedDate": "2018-09-20",
+        "status": "Managed"
+      },
+      {
+        "condition": "High Cholesterol",
+        "diagnosedDate": "2019-03-10",
+        "status": "Treated"
+      }
+    ],
+    "currentMedications": [
+      {
+        "name": "Metformin",
+        "dosage": "500mg",
+        "frequency": "Twice daily",
+        "prescribedDate": "2018-09-20"
+      },
+      {
+        "name": "Atorvastatin",
+        "dosage": "20mg",
+        "frequency": "Once daily",
+        "prescribedDate": "2019-03-10"
+      }
+    ],
+    "allergies": ["Sulfa drugs"],
+    "lastVisit": "2024-01-20",
+    "status": "active"
+  },
+  {
+    "Id": 3,
+    "firstName": "Maria",
+    "lastName": "Rodriguez",
+    "dateOfBirth": "1990-07-22",
+    "gender": "female",
+    "bloodType": "B+",
+    "phone": "(555) 456-7890",
+    "email": "maria.rodriguez@email.com",
+    "address": {
+      "street": "789 Pine Street",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62703"
+    },
+    "emergencyContacts": [
+      {
+        "name": "Carlos Rodriguez",
+        "relationship": "Brother",
+        "phone": "(555) 456-7891"
+      }
+    ],
+    "medicalHistory": [],
+    "currentMedications": [],
+    "allergies": [],
+    "lastVisit": "2024-01-10",
+    "status": "active"
+  },
+  {
+    "Id": 4,
+    "firstName": "James",
+    "lastName": "Williams",
+    "dateOfBirth": "1965-12-03",
+    "gender": "male",
+    "bloodType": "AB+",
+    "phone": "(555) 321-0987",
+    "email": "james.williams@email.com",
+    "address": {
+      "street": "321 Elm Drive",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62704"
+    },
+    "emergencyContacts": [
+      {
+        "name": "Patricia Williams",
+        "relationship": "Wife",
+        "phone": "(555) 321-0988"
+      }
+    ],
+    "medicalHistory": [
+      {
+        "condition": "Coronary Artery Disease",
+        "diagnosedDate": "2021-08-15",
+        "status": "Managed"
+      }
+    ],
+    "currentMedications": [
+      {
+        "name": "Aspirin",
+        "dosage": "81mg",
+        "frequency": "Once daily",
+        "prescribedDate": "2021-08-15"
+      },
+      {
+        "name": "Carvedilol",
+        "dosage": "25mg",
+        "frequency": "Twice daily",
+        "prescribedDate": "2021-08-15"
+      }
+    ],
+    "allergies": ["Latex"],
+    "lastVisit": "2024-01-18",
+    "status": "critical"
+  },
+  {
+    "Id": 5,
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "dateOfBirth": "1988-04-11",
+    "gender": "female",
+    "bloodType": "O+",
+    "phone": "(555) 654-3210",
+    "email": "emily.davis@email.com",
+    "address": {
+      "street": "654 Maple Lane",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62705"
+    },
+    "emergencyContacts": [
+      {
+        "name": "John Davis",
+        "relationship": "Husband",
+        "phone": "(555) 654-3211"
+      }
+    ],
+    "medicalHistory": [
+      {
+        "condition": "Asthma",
+        "diagnosedDate": "2005-06-20",
+        "status": "Managed"
+      }
+    ],
+    "currentMedications": [
+      {
+        "name": "Albuterol Inhaler",
+        "dosage": "90mcg",
+        "frequency": "As needed",
+        "prescribedDate": "2023-01-15"
+      }
+    ],
+    "allergies": ["Dust mites", "Pollen"],
+    "lastVisit": "2023-12-22",
+    "status": "discharged"
+  },
+  {
+    "Id": 6,
+    "firstName": "Thomas",
+    "lastName": "Anderson",
+    "dateOfBirth": "1955-09-14",
+    "gender": "male",
+    "bloodType": "A-",
+    "phone": "(555) 789-0123",
+    "email": "thomas.anderson@email.com",
+    "address": {
+      "street": "159 Cedar Court",
+      "city": "Springfield",
+      "state": "IL",
+      "zipCode": "62706"
+    },
+    "emergencyContacts": [
+      {
+        "name": "Helen Anderson",
+        "relationship": "Wife",
+        "phone": "(555) 789-0124"
+      }
+    ],
+    "medicalHistory": [
+      {
+        "condition": "Osteoarthritis",
+        "diagnosedDate": "2019-11-08",
+        "status": "Managed"
+      },
+      {
+        "condition": "Cataracts",
+        "diagnosedDate": "2022-04-12",
+        "status": "Surgically Corrected"
+      }
+    ],
+    "currentMedications": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "Three times daily",
+        "prescribedDate": "2019-11-08"
+      }
+    ],
+    "allergies": [],
+    "lastVisit": "2024-01-12",
+    "status": "active"
+  }
+]

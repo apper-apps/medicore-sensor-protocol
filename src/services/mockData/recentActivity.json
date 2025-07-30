@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "type": "patient_admission",
+    "description": "New patient Sarah Johnson admitted to Room 204",
+    "timestamp": "2024-01-22T09:15:00Z",
+    "userId": "dr_smith",
+    "patientId": "1"
+  },
+  {
+    "Id": 2,
+    "type": "appointment_scheduled",
+    "description": "Follow-up appointment scheduled for Robert Chen",
+    "timestamp": "2024-01-22T08:45:00Z",
+    "userId": "nurse_wilson",
+    "patientId": "2"
+  },
+  {
+    "Id": 3,
+    "type": "medication_prescribed",
+    "description": "New medication prescribed for Maria Rodriguez",
+    "timestamp": "2024-01-22T08:30:00Z",
+    "userId": "dr_jones",
+    "patientId": "3"
+  },
+  {
+    "Id": 4,
+    "type": "test_ordered",
+    "description": "Blood work ordered for James Williams",
+    "timestamp": "2024-01-22T08:00:00Z",
+    "userId": "dr_smith",
+    "patientId": "4"
+  },
+  {
+    "Id": 5,
+    "type": "patient_discharge",
+    "description": "Emily Davis discharged from Room 105",
+    "timestamp": "2024-01-22T07:30:00Z",
+    "userId": "nurse_garcia",
+    "patientId": "5"
+  },
+  {
+    "Id": 6,
+    "type": "appointment_scheduled",
+    "description": "Annual checkup scheduled for Thomas Anderson",
+    "timestamp": "2024-01-22T07:00:00Z",
+    "userId": "receptionist_brown",
+    "patientId": "6"
+  }
+]
