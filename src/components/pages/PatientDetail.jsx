@@ -69,10 +69,11 @@ const PatientDetail = () => {
   
   const age = patient.dateOfBirth ? differenceInYears(new Date(), new Date(patient.dateOfBirth)) : null;
   
-  const tabs = [
+const tabs = [
     { id: "personal", label: "Personal Info", icon: "User" },
     { id: "medical", label: "Medical History", icon: "FileText" },
     { id: "medications", label: "Current Medications", icon: "Pill" },
+    { id: "timeline", label: "Timeline", icon: "Clock" },
     { id: "emergency", label: "Emergency Contacts", icon: "Phone" }
   ];
   
@@ -385,6 +386,104 @@ const PatientDetail = () => {
                 ) : (
                   <p className="text-gray-500">No emergency contacts registered</p>
                 )}
+              </div>
+            </div>
+)}
+          
+          {activeTab === "timeline" && (
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold text-gray-900">Medical Timeline</h3>
+              
+              <div className="relative">
+                {(() => {
+                  // Collect all timeline events
+                  const timelineEvents = [];
+                  
+                  // Add medical history events
+                  if (patient.medicalHistory && patient.medicalHistory.length > 0) {
+                    patient.medicalHistory.forEach(condition => {
+                      timelineEvents.push({
+                        date: condition.diagnosedDate,
+                        type: 'diagnosis',
+                        title: `Diagnosed with ${condition.condition}`,
+                        description: `Status: ${condition.status}`,
+                        icon: 'Stethoscope',
+                        color: 'bg-red-100 text-red-600'
+                      });
+                    });
+                  }
+                  
+                  // Add medication events
+                  if (patient.currentMedications && patient.currentMedications.length > 0) {
+                    patient.currentMedications.forEach(medication => {
+                      if (medication.prescribedDate) {
+                        timelineEvents.push({
+                          date: medication.prescribedDate,
+                          type: 'medication',
+                          title: `Started ${medication.name}`,
+                          description: `${medication.dosage} - ${medication.frequency}`,
+                          icon: 'Pill',
+                          color: 'bg-blue-100 text-blue-600'
+                        });
+                      }
+                    });
+                  }
+                  
+                  // Add last visit event
+                  if (patient.lastVisit) {
+                    timelineEvents.push({
+                      date: patient.lastVisit,
+                      type: 'visit',
+                      title: 'Last Visit',
+                      description: 'Regular checkup and consultation',
+                      icon: 'Calendar',
+                      color: 'bg-green-100 text-green-600'
+                    });
+                  }
+                  
+                  // Sort events by date (most recent first)
+                  timelineEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
+                  
+                  if (timelineEvents.length === 0) {
+                    return (
+                      <div className="bg-gray-50 p-8 rounded-lg text-center">
+                        <ApperIcon name="Clock" className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                        <p className="text-gray-500">No timeline events available</p>
+                      </div>
+                    );
+                  }
+                  
+                  return (
+                    <div className="space-y-6">
+                      {timelineEvents.map((event, index) => (
+                        <div key={index} className="relative flex items-start space-x-4">
+                          {/* Timeline line */}
+                          {index < timelineEvents.length - 1 && (
+                            <div className="absolute left-5 top-12 w-0.5 h-16 bg-gray-200"></div>
+                          )}
+                          
+                          {/* Event icon */}
+                          <div className={`flex-shrink-0 w-10 h-10 rounded-full ${event.color} flex items-center justify-center`}>
+                            <ApperIcon name={event.icon} className="h-5 w-5" />
+                          </div>
+                          
+                          {/* Event content */}
+                          <div className="flex-1 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                            <div className="flex items-start justify-between">
+                              <div>
+                                <h4 className="font-medium text-gray-900">{event.title}</h4>
+                                <p className="text-sm text-gray-600 mt-1">{event.description}</p>
+                              </div>
+                              <span className="text-sm text-gray-500 font-medium">
+                                {format(new Date(event.date), "MMM dd, yyyy")}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  );
+                })()}
               </div>
             </div>
           )}
